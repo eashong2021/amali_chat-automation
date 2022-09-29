@@ -4,7 +4,7 @@
  * */
 
 const aspectraT = "";
-const aspectraA = "https://connect-dev.amalitech-dev.net";
+const aspectraA = "https://amachat.herokuapp.com/";
 
 const acceptanceWWWUrl = "";
 
