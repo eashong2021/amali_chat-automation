@@ -26,10 +26,10 @@ describe('Chatting aplication', () => {
     })
   
   
-    it('it requires email',  () => {
+    it('it requires email and optional password',  () => {
       cy.get('form').within(($form) => {
       cy.get('input[type="email"]').type('vobexa6247@offsala.com ')
-      cy.get('input[type="text"]').type('vobexa6247@offsala.com ')
+     // cy.get('input[type="text"]').type('vobexa6247@offsala.com ')
       cy.contains('Login').should('be.visible').click()
       })
       cy.location('protocol').should('eq', 'https:')
@@ -37,7 +37,8 @@ describe('Chatting aplication', () => {
   
   
   it('Can chat with a friend', () => {
-   cy.get('.p-button > .bg-orange-900').click()
+    cy.get('.cursor-pointer > div > .bg-orange-900', {timeout:10000}).click()
+   // cy.get('.p-button > .bg-orange-900', {timeout:10000}).click()
    
   //  cy.get('.flex-col > .sidebar-search > .p-input-icon-left > .p-inputtext').type('Astro')
   //cy.get('.mb-1 > :nth-child(2)').click()
